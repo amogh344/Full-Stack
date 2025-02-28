@@ -1,13 +1,18 @@
 let cities = ['New York', 'Los Angeles', 'Chicago', 'Houston', 'Phoenix'];
-console.log("The total number of cities ",cities.length);
 
-console.push("France");
+console.log("The total number of cities:", cities.length);
 
-console.log("the city added at the end is ",cities[5]);
+
+cities.push("France");
+
+console.log("The city added at the end is:", cities[cities.length - 1]);
+
 
 cities.shift();
-console.log("Cities",cities);
+console.log("Cities after removing the first city:", cities);
 
-console.log("the index of Los Angeles is ",cities.indexOf("Los Angeles"));
+
+console.log("The index of 'Los Angeles' is:", cities.indexOf("Los Angeles"));
+
 
 
