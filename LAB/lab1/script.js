@@ -3,3 +3,5 @@ let a = parseFloat(prompt("Enter value for a"));
 let b = parseFloat(prompt("Enter value for b"));
 //alert("Value of b: " + b);
 document.write("Sum: " + (a + b));
+
+console.log("hello world");

@@ -15,5 +15,5 @@ addCity();
 removeCity();
 
 document.write("Cities: ",cities);
-
-document.write("\nNumber of cities: "+cities.length);
+document.write("<br>")
+document.write("Number of cities: "+cities.length);
