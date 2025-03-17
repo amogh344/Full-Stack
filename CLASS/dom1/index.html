@@ -10,26 +10,34 @@
     <h1 id="header">This is a DOM program</h1>
     <p class="paragraph">This is a DOM paragraph</p>
     <p class="paragraph">Another DOM paragraph</p>
-    <button id="button",style=">Button</button>
+    <button id="button">Button</button>
 
     <script>
-
         let header = document.getElementById('header');
         header.style.color = "blue";
-        let paragraphs = document.getElementsByClassName('paragraph');
-        function click()
-        {
-            alert("Clicked me?");
-        }
-        let button = document.getElementById('button');
-        button.addEventListener('click',click);
 
-        for (let i = 0; i < paragraphs.length; i++) 
-        {
+        let paragraphs = document.getElementsByClassName('paragraph');
+        for (let i = 0; i < paragraphs.length; i++) {
             paragraphs[i].style.fontWeight = 'bold';
             paragraphs[i].style.color = 'red';
-
         }
+
+        function handleClick() {
+            alert("Clicked me?");
+        }
+
+        function mouseHover() {
+            button.style.backgroundColor = 'red';
+        }
+
+        function mouseNotHover() {
+            button.style.backgroundColor = '';
+        }
+
+        let button = document.getElementById('button');
+        button.addEventListener('click', handleClick);
+        button.addEventListener('mouseover', mouseHover);
+        button.addEventListener('mouseout', mouseNotHover);
     </script>
     
 </body>
