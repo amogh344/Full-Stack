@@ -10,14 +10,19 @@
     <h1 id="header">This is a DOM program</h1>
     <p class="paragraph">This is a DOM paragraph</p>
     <p class="paragraph">Another DOM paragraph</p>
+    <button id="button",style=">Button</button>
 
     <script>
 
         let header = document.getElementById('header');
         header.style.color = "blue";
-
-
         let paragraphs = document.getElementsByClassName('paragraph');
+        function click()
+        {
+            alert("Clicked me?");
+        }
+        let button = document.getElementById('button');
+        button.addEventListener('click',click);
 
         for (let i = 0; i < paragraphs.length; i++) 
         {
