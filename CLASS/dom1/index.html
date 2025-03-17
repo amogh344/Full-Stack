@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+    <h1 id="header">This is a DOM program</h1>
+    <p class="paragraph">This is a DOM paragraph</p>
+    <p class="paragraph">Another DOM paragraph</p>
+
+    <script>
+
+        let header = document.getElementById('header');
+        header.style.color = "blue";
+
+
+        let paragraphs = document.getElementsByClassName('paragraph');
+
+        for (let i = 0; i < paragraphs.length; i++) 
+        {
+            paragraphs[i].style.fontWeight = 'bold';
+            paragraphs[i].style.color = 'red';
+
+        }
+    </script>
+    
+</body>
+</html>
