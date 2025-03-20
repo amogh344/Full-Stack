@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation Example</title>
+</head>
+<body>
+
+    <h1 id="header">This is a DOM program</h1>
+    <p class="paragraph">This is a DOM paragraph</p>
+    <p class="paragraph">Another DOM paragraph</p>
+    <button id="button">Button</button>
+    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" style="border: 10px;"="Image" id="imageS">
+
+    <script>
+        let header = document.getElementById('header');
+        header.style.color = "blue";
+
+        let paragraphs = document.getElementsByClassName('paragraph');
+        for (let i = 0; i < paragraphs.length; i++) {
+            paragraphs[i].style.fontWeight = 'bold';
+            paragraphs[i].style.color = 'red';
+        }
+
+        function handleClick() {
+            alert("Clicked me?");
+        }
+        function imageS()
+        {
+            
+
+        }
+
+        function mouseHover() {
+            button.style.backgroundColor = 'red';
+
+        }
+
+        function mouseNotHover() {
+            button.style.backgroundColor = '';
+        }
+
+        let button = document.getElementById('button');
+        button.addEventListener('click', handleClick);
+        button.addEventListener('mouseover', mouseHover);
+        button.addEventListener('mouseout', mouseNotHover);
+    </script>
+    
+</body>
+</html>
