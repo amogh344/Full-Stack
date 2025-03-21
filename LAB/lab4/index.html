@@ -11,7 +11,7 @@
     <p class="paragraph">This is a DOM paragraph</p>
     <p class="paragraph">Another DOM paragraph</p>
     <button id="button">Button</button>
-    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" style="border: 10px;"="Image" id="imageS">
+    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" style="border: black 10px;" alt="Image" id="imageS">
 
     <script>
         let header = document.getElementById('header');
@@ -22,23 +22,21 @@
             paragraphs[i].style.fontWeight = 'bold';
             paragraphs[i].style.color = 'red';
         }
-
-        function handleClick() {
+        let imageS = document.getElementById('imageS');
+        function handleClick() 
+        {
             alert("Clicked me?");
         }
-        function imageS()
+        function mouseHover() 
         {
-            
-
-        }
-
-        function mouseHover() {
             button.style.backgroundColor = 'red';
+            button.style.color='white';
 
         }
 
         function mouseNotHover() {
             button.style.backgroundColor = '';
+            button.style.color='black'
         }
 
         let button = document.getElementById('button');
