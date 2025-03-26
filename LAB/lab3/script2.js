@@ -13,7 +13,7 @@ for (let i = 0; i < sn; i++) {
     console.log(`\n--- Enter details for Student ${i + 1} ---`);
     let name = p("Enter the name of the student: ");
     let grade = parseInt(p("Enter the grade: "));
-    let subjects = p("Enter the subjects (comma-separated): ").split(",").map(sub => sub.trim());
+    let subjects = p("Enter the subjects: ").split(",");
     students.push(new Student(name, grade, subjects));
 }
 
