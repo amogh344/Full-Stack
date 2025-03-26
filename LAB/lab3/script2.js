@@ -10,12 +10,19 @@ function Student(name, grade, subjects) {
 
 let sn = parseInt(p("Enter the number of students to add: "));
 for (let i = 0; i < sn; i++) {
+    console.log(`\n--- Enter details for Student ${i + 1} ---`);
     let name = p("Enter the name of the student: ");
     let grade = parseInt(p("Enter the grade: "));
-    let subjects = p("Enter the array of subjects: ").split(",");
+    let subjects = p("Enter the subjects (comma-separated): ").split(",").map(sub => sub.trim());
     students.push(new Student(name, grade, subjects));
 }
 
-students.forEach(s => {
-    console.log(`Name: ${s.name}\nGrade: ${s.grade}\nSubjects: ${s.subjects.join(", ")}\n${s.isPass ? "PASS" : "FAIL"}\n`);
+console.log("\n--- Student Details ---");
+students.forEach((s, index) => {
+    console.log(`\nStudent ${index + 1}:`);
+    console.log("Name      :", s.name);
+    console.log("Grade     :", s.grade);
+    console.log("Subjects  :", s.subjects.join(", "));
+    console.log("Result    :", s.isPass ? "PASS" : "FAIL");
+
 });
