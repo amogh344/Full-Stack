@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM Manipulation Example</title>
+    <style>
+        img {
+            width: 200px;
+            height: auto;
+            border: 10px solid black;
+            transition: border-color 0.3s ease;
+        }
+    </style>
 </head>
 <body>
 
@@ -11,38 +19,56 @@
     <p class="paragraph">This is a DOM paragraph</p>
     <p class="paragraph">Another DOM paragraph</p>
     <button id="button">Button</button>
-    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" style="border: black 10px;" alt="Image" id="imageS">
+    <br><br>
+    <img src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" alt="Image" id="imageS">
 
     <script>
+        // Change header color
         let header = document.getElementById('header');
         header.style.color = "blue";
 
+        // Modify paragraphs
         let paragraphs = document.getElementsByClassName('paragraph');
         for (let i = 0; i < paragraphs.length; i++) {
             paragraphs[i].style.fontWeight = 'bold';
             paragraphs[i].style.color = 'red';
         }
-        let imageS = document.getElementById('imageS');
-        function handleClick() 
-        {
+
+        // Button event handlers
+        let button = document.getElementById('button');
+        function handleClick() {
             alert("Clicked me?");
         }
-        function mouseHover() 
-        {
-            button.style.backgroundColor = 'red';
-            button.style.color='white';
 
+        function mouseHover() {
+            button.style.backgroundColor = 'red';
+            button.style.color = 'white';
         }
 
         function mouseNotHover() {
             button.style.backgroundColor = '';
-            button.style.color='black'
+            button.style.color = 'black';
         }
 
-        let button = document.getElementById('button');
         button.addEventListener('click', handleClick);
         button.addEventListener('mouseover', mouseHover);
         button.addEventListener('mouseout', mouseNotHover);
+
+        // Image hover event - Change border color
+        let imageS = document.getElementById('imageS');
+        imageS.addEventListener("mouseover", function () {
+            this.style.borderColor = "red";
+        });
+
+        imageS.addEventListener("mouseout", function () {
+            this.style.borderColor = "black";
+        });
+
+        // Document keypress event
+        document.addEventListener("keydown", function (event) {
+            console.log("Key pressed:", event.key);
+        });
+
     </script>
     
 </body>
