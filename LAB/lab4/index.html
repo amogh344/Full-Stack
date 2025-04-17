@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -45,5 +45,51 @@
         button.addEventListener('mouseout', mouseNotHover);
     </script>
     
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Event Listeners Example</title>
+  <style>
+    img {
+      border: 3px solid transparent;
+      width: 200px;
+      transition: border-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Button -->
+  <button id="myButton">Click Me</button>
+
+  <!-- Image -->
+  <img id="myImage" src="https://gratisography.com/wp-content/uploads/2024/11/gratisography-augmented-reality-800x525.jpg" alt="Sample Image">
+
+  <script>
+    // Button click event
+    document.getElementById('myButton').addEventListener('click', () => {
+      console.log('Button clicked!');
+    });
+
+    // Image mouseover event
+    const image = document.getElementById('myImage');
+    image.addEventListener('mouseover', () => {
+      image.style.borderColor = 'blue';
+    });
+    image.addEventListener('mouseout', () => {
+      image.style.borderColor = 'transparent';
+    });
+
+    // Key press event
+    document.addEventListener('keydown', (event) => {
+      console.log(`Key pressed: ${event.key}`);
+    });
+  </script>
+
 </body>
 </html>
